@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic-Tac-Toe</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,76 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <nav class="navbar navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">Tic Tac Toe</a>
+        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#exampleModal">
+          Sign-In / Sign-Up
+        </button>
+
+      </nav>
+        <!-- required 'container' class wrapper for our rows/columns -->
+        <div class="container mt-5">
+          <h1 class="pt-3">Tic Tac Toe</h1>
+          <div id="gameboard" class='row'>
+            <div class='box col-4 '></div>
+            <div class='box col-4 '></div>
+            <div class='box col-4 '></div>
+            <div class='box col-4 '></div>
+            <div class='box col-4 '></div>
+            <div class='box col-4 '></div>
+            <div class='box col-4 '></div>
+            <div class='box col-4 '></div>
+            <div class='box col-4 '></div>
+          </div>
+
+          <!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="sign-In-Label">Sign In</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id='signin-modal'>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" name="credentials[email]" class="form-control" id="sign-in-email" aria-describedby="emailHelp" placeholder="email@address.com">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" name="credentials[password]" class="form-control" id="sign-in-password" placeholder="password">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="modal-footer mt-3">
+          </div>
+          </form>
+
+          <form id='signup-modal'>
+            <div class="mb-3">
+              <h5 class="modal-title mb-2" id="sign-Up-lLabel">Sign Up</h5>
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" name="credentials[email]" class="form-control" id="sign-up-email" aria-describedby="emailHelp" placeholder="email@address.com">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" name="credentials[password]" class="form-control" id="sign-up-password" placeholder="password">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+              <input type="password" name="credentials[password_confirmation]" class="form-control" id="sign-up-confirmation-password" placeholder="password confirmation">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
     </body>
 </html>

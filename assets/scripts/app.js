@@ -10,4 +10,6 @@ const gameEvents = require('./events.js')
 
 $(() => {
   // your JS code goes here
+  $('#signin-modal').on('submit', gameEvents.onSignIn)
+  $('#signup-modal').on('submit', gameEvents.onSignUp)
 })
