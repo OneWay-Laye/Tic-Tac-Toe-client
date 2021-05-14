@@ -1,6 +1,7 @@
 'use strict'
 
-const gameEvents = require('./events.js')
+const userEvents = require('./user-scripts/events.js')
+const gameEvents = require('./game-scripts/events.js')
 
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
@@ -10,6 +11,15 @@ const gameEvents = require('./events.js')
 
 $(() => {
   // your JS code goes here
-  $('#signin-modal').on('submit', gameEvents.onSignIn)
-  $('#signup-modal').on('submit', gameEvents.onSignUp)
+
+  // page load events
+  $(document).ready(userEvents.onPageLoad)
+
+  // User Events
+  $('#in-up-button').on('click', userEvents.onInUpFormLoad)
+  $('#signin-form').on('submit', userEvents.onSignIn)
+  $('#signup-form').on('submit', userEvents.onSignUp)
+  $('#out-button').on('click', userEvents.onSignOut)
+
+  // Game events
 })
