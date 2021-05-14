@@ -22,4 +22,6 @@ $(() => {
   $('#out-button').on('click', userEvents.onSignOut)
 
   // Game events
+  $('#gameboard').on('click', gameEvents.onPushInArray)
+  $('#newGame-button').on('click,' gameEvents.onNewGame)
 })
