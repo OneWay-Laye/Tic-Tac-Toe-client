@@ -1,17 +1,82 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Tic-Tac-Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-primary ">
+    <a class="navbar-brand" href="#">Tic Tac Toe</a>
+    <button type="button" class="" id="in-up-button">Sign-In / Sign-Up</button>
+    <button type="button" class="" id="out-button">Sign-Out</button>
+  </nav>
+
+<div id="message"></div>
+
+                      <!-- User Form -->
+
+<div id="in-up-form">
+  <form id="signin-form">
+    <h3>Sign In</h3>
+    <div class="form-group">
+      <label for="signInEmail">Email address</label>
+      <input type="email" class="form-control" id="signIn-email" aria-describedby="emailHelp" name="credentials[email]" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="signInPassword">Password</label>
+      <input type="password" class="form-control" id="signIn-password" name="credentials[password]" placeholder="Enter Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <form id="signup-form">
+    <h3 class="justify-content-center">Sign Up</h3>
+    <div class="form-group">
+      <label for="signup-email">Email address</label>
+      <input type="email" class="form-control" id="signUp-Email" aria-describedby="emailHelp" name="credentials[email]" placeholder="Enter Email">
+    </div>
+    <div class="form-group">
+      <label for="signup-password">Password</label>
+      <input type="password" class="form-control" id="signUp-Password" name="credentials[password]" placeholder="Enter password">
+    </div>
+    <div class="form-group">
+      <label for="signup-Confirm-password">Confirm Password</label>
+      <input type="password" class="form-control" id="signUp-Confirm-Password" name="credentials[password_confirmation]" placeholder="Re-Enter password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+                      <!-- Game container -->
+
+  <div class="container mt-5">
+    <h1 class="pt-3">Tic Tac Toe</h1>
+    <div id="gameboard" class='row'>
+      <div data="0" class='box col-4 '></div>
+      <div data="1" class='box col-4 '></div>
+      <div data="2" class='box col-4 '></div>
+      <div data="3" class='box col-4 '></div>
+      <div data="4" class='box col-4 '></div>
+      <div data="5" class='box col-4 '></div>
+      <div data="6" class='box col-4 '></div>
+      <div data="7" class='box col-4 '></div>
+      <div data="8" class='box col-4 '></div>
+    </div>
+
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+
+
+  </div>
+</body>
+
 </html>

@@ -1,1 +1,25 @@
 @import '~bootstrap/scss/bootstrap';
+
+.box {
+  align-items: center;
+  background-color: green;
+  border: 1px solid $white;
+  color: blue;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+}
+
+#message{
+  display: flex;
+  justify-content: center
+}
+
+.red-error{
+  color: red,
+}
+
+.form-group{
+  display: flex;
+  justify-content: center;
+}
