@@ -3,6 +3,10 @@ const store = require('./../store')
 const onLoad = function () {
   $('#in-up-form').hide()
   $('#out-button').hide()
+  $('#newGame-button').hide()
+  $('.xPosition').hide()
+  $('.oPosition').hide()
+  $('#gameboard').css('pointer-events', 'none')
 }
 
 const onFormLoad = function () {
@@ -17,10 +21,11 @@ const onSignInSuccess = function (res) {
   $('#in-up-form').hide()
   $('#in-up-button').hide()
   $('#out-button').show()
+  $('#newGame-button').show()
 }
 
 const onSignInFailure = function () {
-  $('#message').html('<h3>Error signing in. Please try Again')
+  $('#message').html('<h3>Error signing in. Please try Again</h3>')
   $('#signin-form').addClass('red-error')
 }
 
@@ -40,6 +45,7 @@ const onSignOutSuccess = function () {
   $('#in-up-button').show()
   $('#out-button').hide()
   $('#message').html('<h3>Account successfully signed out. Sign in to play.</h3>')
+  $('#newGame-button').hide()
 }
 
 module.exports = {

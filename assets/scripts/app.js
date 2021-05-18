@@ -22,6 +22,16 @@ $(() => {
   $('#out-button').on('click', userEvents.onSignOut)
 
   // Game events
-  $('#gameboard').on('click', gameEvents.onPushInArray)
-  $('#newGame-button').on('click,' gameEvents.onNewGame)
+  $('#gameboard').on('click', gameEvents.onCurrentMove)
+
+  // on gameboard click we need to set gamepiece in box,
+  // we need to take the data from cell and place gamepiece inside of array
+  // check if game over, if game over return game over message
+  // if game not over switch pieces
+
+  $('#newGame-button').on('click', gameEvents.onNewGame)
+
+  // on new game we need to set playerPiece
+
+  $('#showGame-button').on('click', gameEvents.onGetGame)
 })
