@@ -13,24 +13,13 @@ const winningPositions = [
   [3, 4, 5],
   [6, 7, 8]
 ]
+
 let currentPiece = 'X'
 const switchPiece = function () {
   if (currentPiece === 'X') {
     currentPiece = 'O'
   } else {
     currentPiece = 'X'
-  }
-}
-
-
-const isSpaceAvailible = function (gameID, currentMove) {
-  if ($(event.target).hasClass('taken')) {
-    $('#message').html('<h3>Position has already been claimed, Please select another one.</h3>')
-  } else {
-    $('#message').html(`<h3>${currentPiece} has been placced</h3>`)
-    api.updateGame(gameID, currentMove, currentPiece)
-      .then(ui.onUpdateSuccess)
-      .catch(ui.onUpdateFailure)
   }
 }
 
@@ -51,16 +40,26 @@ const onGetGame = function (event) {
   ui.onshowGameSuccess()
 }
 
+const isSpaceAvailible = function (gameID, currentMove) {
+  if ($(event.target).hasClass('taken')) {
+    $('#message').html('<h3>Position has already been claimed, Please select another one.</h3>')
+  } else {
+    $('#message').html(`<h3>${currentPiece} has been placed</h3>`)
+    ui.onSetPieceSuccess(currentPiece)
+    api.updateGame(gameID, currentMove, currentPiece)
+      .then(ui.onUpdateSuccess)
+      .catch(ui.onUpdateFailure)
+    switchPiece()
+  }
+}
+
 const onCurrentMove = function (event) {
   const currentMove = $(event.target).data('cellIndex')
   console.log(currentMove)
   const gameID = store.game._id
 
   isSpaceAvailible(gameID, currentMove)
-
-  switchPiece()
 }
-
 module.exports = {
   onCurrentMove,
   onNewGame,

@@ -7,6 +7,7 @@ const onLoad = function () {
   $('.xPosition').hide()
   $('.oPosition').hide()
   $('#gameboard').css('pointer-events', 'none')
+  $('#showGame-button').hide()
 }
 
 const onFormLoad = function () {

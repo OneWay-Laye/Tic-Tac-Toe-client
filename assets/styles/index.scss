@@ -1,13 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
 
+$PrimaryColor: #97f72f;
+$secondaryColor: #000000;
+$hoverBox: #525050;
+
+body{
+  background: $secondaryColor;
+  color: $PrimaryColor
+}
+
 .box {
-  align-items: center;
-  background-color: green;
-  border: 1px solid $white;
-  color: blue;
+  align-items: center1;
+  background-color: $secondaryColor;
+  border: 5px solid $PrimaryColor;
+  color: $PrimaryColor;
   display: flex;
   height: 80px;
   justify-content: center;
+  font-family: 'Bad Script', cursive;
 }
 
 #message{
@@ -22,4 +32,12 @@
 .form-group{
   display: flex;
   justify-content: center;
+}
+
+.noBR {
+  border-right: 0
+}
+
+.noBB {
+  border-bottom: 0
 }
