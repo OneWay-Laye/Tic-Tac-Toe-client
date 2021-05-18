@@ -67,8 +67,8 @@ const onSetPieceFailure = function () {
 }
 
 const clearBoard = function () {
-  $('#gameboard > div').text = ''
-  $('#gameboard > div').removeclass = 'taken'
+  $('#gameboard > div').text('')
+  $('#gameboard > div').removeClass('taken')
   $('#gameboard').css('pointer-events', 'auto')
 }
 
