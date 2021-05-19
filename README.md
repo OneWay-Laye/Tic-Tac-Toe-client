@@ -7,8 +7,8 @@
   (v 1.0.1) coming soon
 
 ### Here is my Tic Tac Toe Wireframe and game flow
-1. GameFlow ![](https://i.imgur.com/k5c8QBa.png)
-
+1. GameFlow
+  ![](https://i.imgur.com/k5c8QBa.png)
 2. Webpage Layout
  ![](https://i.imgur.com/SM2ICOz.png)
 3. Signup form Layout
