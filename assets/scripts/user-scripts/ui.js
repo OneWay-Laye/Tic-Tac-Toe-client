@@ -15,7 +15,7 @@ const onFormLoad = function () {
 }
 
 const onSignInSuccess = function (res) {
-  $('#message').html('<h3>Welcome, enjoy the game!</h3>')
+  $('#message').html('<h3><span class="flicker">Welcome</span>, enjoy the game!</h3>')
   store.user = res.user
   console.log(store.user)
   $('#signin-form').trigger('reset')

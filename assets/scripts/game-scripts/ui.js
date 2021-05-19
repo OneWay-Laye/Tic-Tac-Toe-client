@@ -2,7 +2,7 @@ const store = require('./../store')
 
 const startNew = function (data) {
   store.game = data.game
-  $('#message').html('<h3>New game has started!</h3>')
+  $('#message').html('<h3>New <span class="flicker">game</span> has started!</h3>')
 }
 
 const onUpdateSuccess = function (res) {
@@ -42,10 +42,10 @@ const onUpdateSuccess = function (res) {
   }
 
   if (gameOver === true && !currentGame.includes('')) {
-    $('#message').html(`<h3>${winningPlayer} game! Press new game button to play again</h3>`)
+    $('#message').html(`<h3><span class="flicker">${winningPlayer}</span> game! Press new game button to play again</h3>`)
     $('#gameboard').css('pointer-events', 'none')
   } else if (gameOver === true) {
-    $('#message').html(`<h3>${winningPlayer} Won The game! Press new game button to play again</h3>`)
+    $('#message').html(`<h3><span class="flicker">${winningPlayer}</span> Won The game! Press new game button to play again</h3>`)
     $('#gameboard').css('pointer-events', 'none')
   }
 }

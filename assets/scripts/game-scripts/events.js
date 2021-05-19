@@ -25,9 +25,9 @@ const onNewGame = function (event) {
 
 const isSpaceAvailible = function (gameID, currentMove) {
   if ($(event.target).hasClass('taken')) {
-    $('#message').html('<h3>Position has already been claimed, Please select another one.</h3>')
+    $('#message').html('<h3>Position has already been <span class="flicker">claimed</span>, Please select another one.</h3>')
   } else {
-    $('#message').html(`<h3>${currentPiece} has been placed</h3>`)
+    $('#message').html(`<h3><span class="flicker">${currentPiece}</span> has been placed</h3>`)
     ui.onSetPieceSuccess(currentPiece)
     api.updateGame(gameID, currentMove, currentPiece)
       .then(ui.onUpdateSuccess)

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Tic-Tac-Toe</title>
+  <title>Neon Tic-<span class="flicker">Tac</span>-Toe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Do not add `link` tags-->
@@ -16,8 +16,8 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-dark bg-primary ">
-    <a class="navbar-brand" href="#">Tic Tac Toe</a>
+  <nav class="navbar navbar-dark ">
+    <h3 class='title'>Tic Tac Toe</h3>
     <button type="button" class="" id="in-up-button">Sign-In / Sign-Up</button>
     <button type="button" class="" id="out-button">Sign-Out</button>
   </nav>
@@ -37,7 +37,7 @@
       <label for="signInPassword">Password</label>
       <input type="password" class="form-control" id="signIn-password" name="credentials[password]" placeholder="Enter Password">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btnOnBlack">Submit</button>
   </form>
 
   <form id="signup-form">
@@ -54,14 +54,14 @@
       <label for="signup-Confirm-password">Confirm Password</label>
       <input type="password" class="form-control" id="signUp-Confirm-Password" name="credentials[password_confirmation]" placeholder="Re-Enter password">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btnOnBlack">Submit</button>
   </form>
 </div>
                       <!-- Game container -->
 
   <div class="container mt-5">
-    <h1 class="pt-3">Tic Tac Toe</h1>
-    <button id='newGame-button'>New Game</button>
+    <h1 class="pt-3">Neon Tic <span class="flicker">Tac</span> Toe</h1>
+    <button id='newGame-button' class='btnOnBlack mb-2'>New Game</button>
     <button id='showGame-button'>Show Game</button>
     <div id="gameboard" class='row'>
       <div data-cell-index="0" class='box col-4 space noBR noBB'></div>

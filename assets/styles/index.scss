@@ -19,17 +19,49 @@ body{
   justify-content: center;
   font-family: 'Bad Script', cursive;
 
-  & .taken {
-    text-align: center;
-    align-items: center;
-    font-size: 12px;
-    color: blue
-  }
+}
+
+
+nav {
+  background-color: $PrimaryColor;
+
+> .title {
+  color: $secondaryColor;
+}
+
+> button{
+  background-color: $secondaryColor;
+  color: $PrimaryColor;
+}
 }
 
 #message{
   display: flex;
-  justify-content: center
+  justify-content: center;
+  margin: 20px 20px 0 20px;
+}
+
+.btnOnBlack {
+  background-color: $PrimaryColor;
+  color: $secondaryColor;
+}
+
+.flicker {
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+
+}
+
+#gameboard > .taken {
+    text-align: center;
+    align-items: center;
+    font-size: 50px;
+    color: $PrimaryColor
 }
 
 .red-error{
