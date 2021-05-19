@@ -12,16 +12,6 @@ const newGame = function (data) {
   })
 }
 
-const getGames = function () {
-  return $.ajax({
-    url: config.apiUrl + '/games',
-    method: 'GET',
-    headers: {
-      Authorization: `Bearer ${store.user.token}`
-    }
-  })
-}
-
 const updateGame = function (gameID, cellIndex, cellValue) {
   console.log(gameID)
   return $.ajax({
@@ -44,6 +34,5 @@ const updateGame = function (gameID, cellIndex, cellValue) {
 
 module.exports = {
   newGame,
-  getGames,
   updateGame
 }

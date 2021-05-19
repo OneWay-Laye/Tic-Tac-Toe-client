@@ -2,16 +2,7 @@ const store = require('./../store')
 
 const startNew = function (data) {
   store.game = data.game
-  $('.xPosition').hide()
-  $('.oPosition').hide()
-}
-
-const onshowGameSuccess = function () {
-  console.log(store.game)
-}
-
-const onshowGameFailure = function () {
-  console.log('Error setting new game data')
+  $('#message').html('<h3>New game has started!</h3>')
 }
 
 const onUpdateSuccess = function (res) {
@@ -45,25 +36,23 @@ const onUpdateSuccess = function (res) {
   } else if (currentGame[6] === currentGame[7] && currentGame[6] === currentGame[8] && currentGame[6] !== '') {
     gameOver = true
     winningPlayer = currentGame[6]
+  } else if (!currentGame.includes('')) {
+    gameOver = true
+    winningPlayer = 'CAT'
   }
 
-  if (gameOver === true) {
+  if (gameOver === true && !currentGame.includes('')) {
+    $('#message').html(`<h3>${winningPlayer} game! Press new game button to play again</h3>`)
+    $('#gameboard').css('pointer-events', 'none')
+  } else if (gameOver === true) {
     $('#message').html(`<h3>${winningPlayer} Won The game! Press new game button to play again</h3>`)
     $('#gameboard').css('pointer-events', 'none')
   }
 }
 
-const onUpdateFailure = function () {
-  console.error
-}
-
 const onSetPieceSuccess = function (currentPiece) {
   event.target.innerHTML = currentPiece
   $(event.target).addClass('taken')
-}
-
-const onSetPieceFailure = function () {
-  $(event.target).hasClass('taken')
 }
 
 const clearBoard = function () {
@@ -74,11 +63,7 @@ const clearBoard = function () {
 
 module.exports = {
   startNew,
-  onshowGameSuccess,
-  onshowGameFailure,
-  onUpdateFailure,
   onUpdateSuccess,
   onSetPieceSuccess,
-  onSetPieceFailure,
   clearBoard
 }

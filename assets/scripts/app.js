@@ -33,5 +33,4 @@ $(() => {
 
   // on new game we need to set playerPiece
 
-  $('#showGame-button').on('click', gameEvents.onGetGame)
 })
