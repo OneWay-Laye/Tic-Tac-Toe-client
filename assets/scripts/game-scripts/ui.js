@@ -15,27 +15,51 @@ const onUpdateSuccess = function (res) {
   if (currentGame[0] === currentGame[1] && currentGame[0] === currentGame[2] && currentGame[0] !== '') {
     gameOver = true
     winningPlayer = currentGame[0]
+    $('.box-0 h2').addClass('flicker')
+    $('.box-1 h2').addClass('flicker')
+    $('.box-2 h2').addClass('flicker')
   } else if (currentGame[0] === currentGame[3] && currentGame[0] === currentGame[6] && currentGame[0] !== '') {
     gameOver = true
     winningPlayer = currentGame[0]
+    $('.box-0 h2').addClass('flicker')
+    $('.box-3 h2').addClass('flicker')
+    $('.box-6 h2').addClass('flicker')
   } else if (currentGame[0] === currentGame[4] && currentGame[0] === currentGame[8] && currentGame[0] !== '') {
     gameOver = true
     winningPlayer = currentGame[0]
+    $('.box-0 h2').addClass('flicker')
+    $('.box-4 h2').addClass('flicker')
+    $('.box-8 h2').addClass('flicker')
   } else if (currentGame[1] === currentGame[4] && currentGame[1] === currentGame[7] && currentGame[1] !== '') {
     gameOver = true
     winningPlayer = currentGame[1]
+    $('.box-1 h2').addClass('flicker')
+    $('.box-4 h2').addClass('flicker')
+    $('.box-7 h2').addClass('flicker')
   } else if (currentGame[2] === currentGame[4] && currentGame[2] === currentGame[6] && currentGame[2] !== '') {
     gameOver = true
     winningPlayer = currentGame[2]
+    $('.box-2 h2').addClass('flicker')
+    $('.box-4 h2').addClass('flicker')
+    $('.box-6 h2').addClass('flicker')
   } else if (currentGame[2] === currentGame[5] && currentGame[2] === currentGame[8] && currentGame[2] !== '') {
     gameOver = true
     winningPlayer = currentGame[2]
+    $('.box-2 h2').addClass('flicker')
+    $('.box-5 h2').addClass('flicker')
+    $('.box-8 h2').addClass('flicker')
   } else if (currentGame[3] === currentGame[4] && currentGame[3] === currentGame[5] && currentGame[3] !== '') {
     gameOver = true
     winningPlayer = currentGame[3]
+    $('.box-3 h2').addClass('flicker')
+    $('.box-4 h2').addClass('flicker')
+    $('.box-5 h2').addClass('flicker')
   } else if (currentGame[6] === currentGame[7] && currentGame[6] === currentGame[8] && currentGame[6] !== '') {
     gameOver = true
     winningPlayer = currentGame[6]
+    $('.box-6 h2').addClass('flicker')
+    $('.box-7 h2').addClass('flicker')
+    $('.box-8 h2').addClass('flicker')
   } else if (!currentGame.includes('')) {
     gameOver = true
     winningPlayer = 'CAT'
@@ -51,7 +75,7 @@ const onUpdateSuccess = function (res) {
 }
 
 const onSetPieceSuccess = function (currentPiece) {
-  event.target.innerHTML = currentPiece
+  event.target.innerHTML = `<h2>${currentPiece}</h2>`
   $(event.target).addClass('taken')
 }
 
