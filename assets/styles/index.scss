@@ -21,6 +21,9 @@ body{
 
 }
 
+input, label {
+    display:block;
+}
 
 nav {
   background-color: $PrimaryColor;

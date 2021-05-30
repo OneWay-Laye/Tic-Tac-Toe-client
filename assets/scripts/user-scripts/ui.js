@@ -4,14 +4,13 @@ const onLoad = function () {
   $('#in-up-form').hide()
   $('#out-button').hide()
   $('#newGame-button').hide()
-  $('.xPosition').hide()
-  $('.oPosition').hide()
   $('#gameboard').css('pointer-events', 'none')
   $('#showGame-button').hide()
 }
 
 const onFormLoad = function () {
   $('#in-up-form').show()
+  $('#signup-form').show()
 }
 
 const onSignInSuccess = function (res) {
@@ -23,6 +22,7 @@ const onSignInSuccess = function (res) {
   $('#in-up-button').hide()
   $('#out-button').show()
   $('#newGame-button').show()
+  $('#signin-form').removeClass('col-12')
 }
 
 const onSignInFailure = function () {
@@ -34,6 +34,7 @@ const onSignUpSuccess = function () {
   $('#message').html('<h3>Account successfully created. Now sign in below.</h3>')
   $('#signup-form').hide()
   $('#signup-form').trigger('reset')
+  $('#signin-form').addClass('col-12')
 }
 
 const onSignUpFailure = function () {
