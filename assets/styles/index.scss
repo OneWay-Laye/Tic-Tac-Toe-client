@@ -47,14 +47,40 @@ nav {
 }
 
 .flicker {
-  animation: blinker 2s linear infinite;
+  animation: blinker 4s linear infinite;
 }
 
 @keyframes blinker {
-  50% {
-    opacity: 0;
-  }
-
+  // 20% {
+  //   opacity: 100;
+  // }
+  // 25% {
+  //   opacity: 0;
+  // }
+  // 30% {
+  //   opacity: 100;
+  // }
+  // 35%{
+  //
+  // }
+  // 70% {
+  //   opacity: 100;
+  // }
+  // 75% {
+  //   opacity: 0;
+  // }
+  // 90% {
+  //   opacity: 100;
+  // }
+  0% {opacity:100}
+   3% {opacity:0}
+   6% {opacity:0}
+   7% {opacity:100}
+   8% {opacity:0}
+   9% {opacity:100}
+   70% {opacity:100}
+   99% {opacity:0}
+   100% {opacity:100}
 }
 
 #gameboard > .taken {
