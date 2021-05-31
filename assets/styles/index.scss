@@ -6,7 +6,8 @@ $hoverBox: #525050;
 
 body{
   background: $secondaryColor;
-  color: $PrimaryColor
+  color: $PrimaryColor;
+  font-family: 'Bad Script', cursive;
 }
 
 .box {
@@ -18,11 +19,11 @@ body{
   height: 200px;
   justify-content: center;
   font-family: 'Bad Script', cursive;
-
 }
 
-input, label {
-    display:block;
+#gameboard :hover {
+  background-color: $PrimaryColor;
+  color: $secondaryColor;
 }
 
 nav {
@@ -97,6 +98,14 @@ nav {
   color: red,
 }
 
+.noClick {
+  cursor: no-drop;
+}
+
+.canClick {
+  cursor: pointer;
+}
+
 .form-group{
   display: flex;
   justify-content: center;
@@ -109,6 +118,7 @@ nav {
 .noBB {
   border-bottom: 0
 }
+
 
 .noBT {
   border-top: 0

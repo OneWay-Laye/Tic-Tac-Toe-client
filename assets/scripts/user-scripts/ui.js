@@ -4,7 +4,7 @@ const onLoad = function () {
   $('#in-up-form').hide()
   $('#out-button').hide()
   $('#newGame-button').hide()
-  $('#gameboard').css('pointer-events', 'none')
+  $('#gameboard').addClass('noClick')
   $('#showGame-button').hide()
 }
 
@@ -23,6 +23,7 @@ const onSignInSuccess = function (res) {
   $('#out-button').show()
   $('#newGame-button').show()
   $('#signin-form').removeClass('col-12')
+  $('#gameboard').removeClass('noClick').addClass('canClick')
 }
 
 const onSignInFailure = function () {
@@ -48,6 +49,7 @@ const onSignOutSuccess = function () {
   $('#out-button').hide()
   $('#message').html('<h3>Account successfully signed out. Sign in to play.</h3>')
   $('#newGame-button').hide()
+  $('#gameboard').removeClass('canClick').addClass('noClick')
 }
 
 module.exports = {
