@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Neon Tic-Tac-Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-dark ">
+    <h3 class='title'>Tic <span class="flicker">Tac</span> Toe</h3>
+    <button type="button" class="" id="in-up-button">Sign-In / Sign-Up</button>
+    <button type="button" class="" id="out-button">Sign-Out</button>
+  </nav>
+
+<div id="message"><h3>Sign in to play!</h3></div>
+
+                      <!-- User Form -->
+
+<div class="row" id="in-up-form">
+  <form class ='p-3 col-6 border border-success' id="signin-form">
+    <h3>Sign In</h3>
+    <div class="form-group">
+      <label for="signInEmail">Email address</label>
+      <input type="email" class="form-control" id="signIn-email" aria-describedby="emailHelp" name="credentials[email]" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="signInPassword">Password</label>
+      <input type="password" class="form-control" id="signIn-password" name="credentials[password]" placeholder="Enter Password">
+    </div>
+    <button type="submit" class="btn btnOnBlack">Submit</button>
+  </form>
+
+  <form class='p-3 col-6 border border-success' id="signup-form">
+    <h3 class="justify-content-center">Sign Up</h3>
+    <div class="form-group">
+      <label for="signup-email">Email address</label>
+      <input type="email" class="form-control" id="signUp-Email" aria-describedby="emailHelp" name="credentials[email]" placeholder="Enter Email">
+    </div>
+    <div class="form-group">
+      <label for="signup-password">Password</label>
+      <input type="password" class="form-control" id="signUp-Password" name="credentials[password]" placeholder="Enter password">
+    </div>
+    <div class="form-group">
+      <label for="signup-Confirm-password">Confirm Password</label>
+      <input type="password" class="form-control" id="signUp-Confirm-Password" name="credentials[password_confirmation]" placeholder="Re-Enter password">
+    </div>
+    <button type="submit" class="btn btnOnBlack">Submit</button>
+  </form>
+</div>
+                      <!-- Game container -->
+
+  <div class="container mt-5">
+    <h1 class="pt-3">Neon Tic <span class="flicker">Tac</span> Toe</h1>
+    <button id='newGame-button' class='btnOnBlack mb-2'>New Game</button>
+    <button id='showGame-button'>Show Game</button>
+    <div id="gameboard" class='pb-5 row'>
+      <div data-cell-index="0" class='box box-0 col-4 space noBR noBB noBT noBL'></div>
+      <div data-cell-index="1" class='box box-1 col-4 space noBR noBB noBT'></div>
+      <div data-cell-index="2" class='box box-2 col-4 space noBB noBT noBR'></div>
+      <div data-cell-index="3" class='box box-3 col-4 space noBR noBB noBL'></div>
+      <div data-cell-index="4" class='box box-4 col-4 space noBR noBB'></div>
+      <div data-cell-index="5" class='box box-5 col-4 space noBB noBR'></div>
+      <div data-cell-index="6" class='box box-6 col-4 space noBR noBL noBB'></div>
+      <div data-cell-index="7" class='box box-7 col-4 space noBR noBB'></div>
+      <div data-cell-index="8" class='box box-8 col-4 space noBR noBB'></div>
+    </div>
+
+<div>    </div>
+
+
+  </div>
+</body>
+
+</html>
