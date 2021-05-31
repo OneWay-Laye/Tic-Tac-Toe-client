@@ -40,7 +40,6 @@ const onCurrentMove = function (event) {
   const currentMove = $(event.target).data('cellIndex')
   console.log(currentMove)
   const gameID = store.game._id
-  $(currentMove).hover()
 
   isSpaceAvailible(gameID, currentMove)
 }

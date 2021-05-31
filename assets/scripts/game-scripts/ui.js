@@ -77,6 +77,7 @@ const onUpdateSuccess = function (res) {
 const onSetPieceSuccess = function (currentPiece) {
   event.target.innerHTML = `<h2>${currentPiece}</h2>`
   $(event.target).addClass('taken')
+  $(event.target).addClass('noHover')
 }
 
 const clearBoard = function () {

@@ -11,7 +11,7 @@ body{
 }
 
 .box {
-  align-items: center1;
+  align-items: center;
   background-color: $secondaryColor;
   border: 5px solid $PrimaryColor;
   color: $PrimaryColor;
@@ -24,6 +24,13 @@ body{
 #gameboard :hover {
   background-color: $PrimaryColor;
   color: $secondaryColor;
+  > h2 {
+    color: $secondaryColor;
+  }
+}
+
+.noHover {
+  background-color: $secondaryColor;
 }
 
 nav {
@@ -55,27 +62,6 @@ nav {
 }
 
 @keyframes blinker {
-  // 20% {
-  //   opacity: 100;
-  // }
-  // 25% {
-  //   opacity: 0;
-  // }
-  // 30% {
-  //   opacity: 100;
-  // }
-  // 35%{
-  //
-  // }
-  // 70% {
-  //   opacity: 100;
-  // }
-  // 75% {
-  //   opacity: 0;
-  // }
-  // 90% {
-  //   opacity: 100;
-  // }
   0% {opacity:100}
    3% {opacity:0}
    6% {opacity:0}
@@ -126,4 +112,8 @@ nav {
 
 .noBL {
   border-left: 0
+}
+
+.taken {
+  font-size: 30px
 }
